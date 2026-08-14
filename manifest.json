@@ -1,18 +1,12 @@
-{
-  "id": "haiwaikan-repo",
-  "name": "Haiwaikan Repo",
-  "version": "1.0.0",
-  "description": "Haiwaikan provider for Nuvio",
-  "providers": [
-    {
-      "id": "haiwaikan",
-      "name": "Haiwaikan (海外看)",
-      "description": "Direct ad-free streaming from Haiwaikan",
-      "version": "1.0.0",
-      "author": "blumoonlyt",
-      "filename": "haiwaikan.js",
-      "supportedTypes": ["movie", "tv"],
-      "enabled": true
-    }
-  ]
-}
+[
+  {
+    "id": "haiwaikan",
+    "name": "Haiwaikan (海外看)",
+    "description": "Direct ad-free streaming from Haiwaikan for Nuvio",
+    "version": "1.0.0",
+    "author": "blumoonlyt",
+    "filename": "haiwaikan.js",
+    "supportedTypes": ["movie", "tv"],
+    "enabled": true
+  }
+]
