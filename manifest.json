@@ -5,6 +5,20 @@
   "description": "Direct ad-free streaming from Haiwaikan for Nuvio",
   "author": "blumoonlyt",
   "manifestVersion": 1,
+  "sources": [
+    {
+      "id": "haiwaikan",
+      "name": "Haiwaikan (海外看)",
+      "description": "Direct ad-free streaming from Haiwaikan",
+      "version": "1.0.0",
+      "author": "blumoonlyt",
+      "filename": "haiwaikan.js",
+      "type": "provider",
+      "supportedTypes": ["movie", "tv"],
+      "contentLanguage": ["zh"],
+      "enabled": true
+    }
+  ],
   "providers": [
     {
       "id": "haiwaikan",
@@ -13,7 +27,9 @@
       "version": "1.0.0",
       "author": "blumoonlyt",
       "filename": "haiwaikan.js",
+      "type": "provider",
       "supportedTypes": ["movie", "tv"],
+      "contentLanguage": ["zh"],
       "enabled": true
     }
   ]
