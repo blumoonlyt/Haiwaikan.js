@@ -1,9 +1,10 @@
 {
+  "id": "haiwaikan-repo",
   "name": "Haiwaikan Repo",
-  "manifestVersion": 1,
-  "pluginVersion": "1.0.0",
+  "version": "1.0.0",
   "description": "Direct ad-free streaming from Haiwaikan for Nuvio",
   "author": "blumoonlyt",
+  "manifestVersion": 1,
   "sources": [
     {
       "id": "haiwaikan",
