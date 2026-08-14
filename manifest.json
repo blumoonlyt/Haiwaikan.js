@@ -1,0 +1,9 @@
+{
+  "id": "haiwaikan-clean-provider",
+  "name": "Haiwaikan Clean Provider",
+  "version": "1.0.0",
+  "description": "Direct ad-free streaming from Haiwaikan for Nuvio",
+  "filename": "haiwaikan.js",
+  "supportedTypes": ["movie", "tv"],
+  "enabled": true
+}
