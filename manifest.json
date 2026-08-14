@@ -4,7 +4,7 @@
     "name": "Haiwaikan (海外看)",
     "description": "Direct ad-free streaming from Haiwaikan for Nuvio",
     "version": "1.0.0",
-    "author": "Custom",
+    "author": "blumoonlyt",
     "filename": "haiwaikan.js",
     "supportedTypes": ["movie", "tv"],
     "enabled": true
