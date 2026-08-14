@@ -2,14 +2,12 @@
 const API_BASE = "https://haiwaikan.com/api.php/provide/vod/";
 
 function getStreams(tmdbId, mediaType, season, episode) {
-    // 1. Resolve TMDB ID to Chinese Title for maximum match accuracy
     return fetch(`https://api.themoviedb.org/3/${mediaType}/${tmdbId}?language=zh-CN`)
         .then(res => res.json())
         .then(tmdbData => {
             const queryTitle = tmdbData.title || tmdbData.name || tmdbData.original_title || tmdbData.original_name;
             if (!queryTitle) return [];
 
-            // 2. Query the raw JSON API (bypasses website popups and web ads)
             const searchUrl = `${API_BASE}?ac=detail&wd=${encodeURIComponent(queryTitle)}`;
             return fetch(searchUrl, {
                 headers: {
@@ -24,7 +22,6 @@ function getStreams(tmdbId, mediaType, season, episode) {
 
             const streams = [];
 
-            // 3. Extract pure m3u8 streams
             data.list.forEach(item => {
                 if (!item.vod_play_url) return;
 
@@ -38,7 +35,6 @@ function getStreams(tmdbId, mediaType, season, episode) {
 
                         if (!epUrl || !epUrl.includes('.m3u8')) return;
 
-                        // Match TV Episode number
                         if (mediaType === 'tv') {
                             const epMatch = epName.match(/\d+/);
                             const epNum = epMatch ? parseInt(epMatch[0], 10) : null;
@@ -46,7 +42,7 @@ function getStreams(tmdbId, mediaType, season, episode) {
                         }
 
                         streams.push({
-                            name: "Haiwaikan (Ad-Free API)",
+                            name: "Haiwaikan",
                             title: `${item.vod_name} - ${epName || 'Play'}`,
                             url: epUrl.trim(),
                             quality: "1080p",
